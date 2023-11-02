@@ -88,6 +88,6 @@ private final String getManifestURL() {
 
 ## Roadmap
 - [x] Decompile base app
-- [ ] Get OTA updates to the app
+- [x] Get OTA updates to the app
 - [ ] Decompile OTA updates
 - [ ] Profit
