@@ -1,0 +1,185 @@
+package re;
+
+import com.discord.C2820R;
+
+/* renamed from: re.h */
+/* loaded from: /home/user/temp/discord/apk/extracted/_base.apk/classes3.dex */
+public final class C12131h {
+
+    /* renamed from: R */
+    public static final int f31509R = 0;
+
+    /* renamed from: S */
+    public static final int f31510S = 1;
+
+    /* renamed from: T */
+    public static final int f31511T = 2;
+
+    /* renamed from: V */
+    public static final int f31513V = 0;
+
+    /* renamed from: W */
+    public static final int f31514W = 1;
+
+    /* renamed from: X */
+    public static final int f31515X = 2;
+
+    /* renamed from: Y */
+    public static final int f31516Y = 3;
+
+    /* renamed from: Z */
+    public static final int f31517Z = 4;
+
+    /* renamed from: a0 */
+    public static final int f31519a0 = 5;
+
+    /* renamed from: b0 */
+    public static final int f31521b0 = 6;
+
+    /* renamed from: c0 */
+    public static final int f31523c0 = 7;
+
+    /* renamed from: d0 */
+    public static final int f31525d0 = 8;
+
+    /* renamed from: e0 */
+    public static final int f31527e0 = 9;
+
+    /* renamed from: f0 */
+    public static final int f31529f0 = 10;
+
+    /* renamed from: g0 */
+    public static final int f31531g0 = 11;
+
+    /* renamed from: a */
+    public static final int[] f31518a = {2130968660, 2130968668, 2130968669, 2130968850, 2130968851, 2130968852, 2130968853, 2130968854, 2130968855, 2130968894, 2130968911, 2130968912, 2130968946, 2130969074, 2130969081, 2130969089, 2130969090, 2130969095, 2130969108, 2130969130, 2130969257, 2130969378, 2130969470, 2130969481, 2130969482, 2130969606, 2130969610, 2130969726, 2130969739};
+
+    /* renamed from: b */
+    public static final int[] f31520b = {16842931};
+
+    /* renamed from: c */
+    public static final int[] f31522c = {16843071};
+
+    /* renamed from: d */
+    public static final int[] f31524d = new int[0];
+
+    /* renamed from: e */
+    public static final int[] f31526e = {2130968660, 2130968668, 2130968789, 2130969074, 2130969610, 2130969739};
+
+    /* renamed from: f */
+    public static final int[] f31528f = {2130968968, 2130969114};
+
+    /* renamed from: g */
+    public static final int[] f31530g = {16842994, 2130968723, 2130968724, 2130969246, 2130969247, 2130969374, 2130969554, 2130969568};
+
+    /* renamed from: h */
+    public static final int[] f31532h = {16843036, 16843156, 16843157, 16843158, 16843532, 16843533};
+
+    /* renamed from: i */
+    public static final int[] f31533i = {16842960, 16843161};
+
+    /* renamed from: j */
+    public static final int[] f31534j = {16843161, 16843849, 16843850, 16843851};
+
+    /* renamed from: k */
+    public static final int[] f31535k = {16843033, 2130969581, 2130969724, 2130969725};
+
+    /* renamed from: l */
+    public static final int[] f31536l = {16843074, 2130969719, 2130969720, 2130969721};
+
+    /* renamed from: m */
+    public static final int[] f31537m = {16842804, 16843117, 16843118, 16843119, 16843120, 16843666, 16843667};
+
+    /* renamed from: n */
+    public static final int[] f31538n = {16842804, 2130968648, 2130968649, 2130968650, 2130968651, 2130968652, 2130968927, 2130968928, 2130968929, 2130968930, 2130968932, 2130968933, 2130968934, 2130968935, 2130968950, 2130969002, 2130969043, 2130969052, 2130969158, 2130969239, 2130969653, 2130969702};
+
+    /* renamed from: o */
+    public static final int[] f31539o = {16842839, 16842926, 2130968576, 2130968577, 2130968578, 2130968579, 2130968580, 2130968581, 2130968582, 2130968583, 2130968584, 2130968585, 2130968586, 2130968587, 2130968588, 2130968590, 2130968591, 2130968592, 2130968593, 2130968594, 2130968595, 2130968596, 2130968597, 2130968598, 2130968599, 2130968600, 2130968601, 2130968602, 2130968603, 2130968604, 2130968605, 2130968606, 2130968607, 2130968608, 2130968612, 2130968618, 2130968619, 2130968620, 2130968621, 2130968640, 2130968697, 2130968716, 2130968717, 2130968718, 2130968719, 2130968720, 2130968726, 2130968727, 2130968743, 2130968753, 2130968802, 2130968803, 2130968804, 2130968806, 2130968807, 2130968808, 2130968809, 2130968826, 2130968828, 2130968839, 2130968865, 2130968908, 2130968909, 2130968910, 2130968917, 2130968922, 2130968939, 2130968940, 2130968943, 2130968944, 2130968945, 2130969089, 2130969106, 2130969242, 2130969243, 2130969244, 2130969245, 2130969248, 2130969249, 2130969250, 2130969251, 2130969252, 2130969253, 2130969254, 2130969255, 2130969256, 2130969443, 2130969444, 2130969445, 2130969469, 2130969471, 2130969486, 2130969488, 2130969489, 2130969490, 2130969532, 2130969533, 2130969534, 2130969535, 2130969578, 2130969579, 2130969619, 2130969676, 2130969678, 2130969679, 2130969680, 2130969682, 2130969683, 2130969684, 2130969685, 2130969691, 2130969692, 2130969741, 2130969742, 2130969744, 2130969745, 2130969801, 2130969810, 2130969811, 2130969812, 2130969813, 2130969814, 2130969815, 2130969816, 2130969817, 2130969818, 2130969819};
+
+    /* renamed from: p */
+    public static final int[] f31540p = {2130968626};
+
+    /* renamed from: q */
+    public static final int[] f31541q = {16843173, 16843551, 16844359, 2130968627, 2130969154};
+
+    /* renamed from: r */
+    public static final int[] f31542r = {16843015, 2130968721, 2130968728, 2130968729};
+
+    /* renamed from: s */
+    public static final int[] f31543s = {2130968637, 2130968638, 2130968678, 2130968801, 2130968931, 2130969067, 2130969577, 2130969706};
+
+    /* renamed from: t */
+    public static final int[] f31544t = {2130969044, 2130969045, 2130969046, 2130969047, 2130969048, 2130969049, 2130969050};
+
+    /* renamed from: u */
+    public static final int[] f31545u = {16844082, 16844083, 16844095, 16844143, 16844144, 2130969042, 2130969051, 2130969052, 2130969053, 2130969772};
+
+    /* renamed from: v */
+    public static final int[] f31546v = {16843165, 16843166, 16843169, 16843170, 16843171, 16843172, 16843265, 16843275, 16844048, 16844049, 16844050, 16844051};
+
+    /* renamed from: w */
+    public static final int[] f31547w = {16843173, 16844052};
+
+    /* renamed from: x */
+    public static final int[] f31548x = {16842927, 16842948, 16843046, 16843047, 16843048, 2130968912, 2130968920, 2130969337, 2130969550};
+
+    /* renamed from: y */
+    public static final int[] f31549y = {16842931, 16842996, 16842997, 16843137};
+
+    /* renamed from: z */
+    public static final int[] f31550z = {16843436, 16843437};
+
+    /* renamed from: A */
+    public static final int[] f31492A = {16842766, 16842960, 16843156, 16843230, 16843231, 16843232};
+
+    /* renamed from: B */
+    public static final int[] f31493B = {16842754, 16842766, 16842960, 16843014, 16843156, 16843230, 16843231, 16843233, 16843234, 16843235, 16843236, 16843237, 16843375, 2130968589, 2130968609, 2130968611, 2130968628, 2130968849, 2130969101, 2130969102, 2130969413, 2130969545, 2130969747};
+
+    /* renamed from: C */
+    public static final int[] f31494C = {16842926, 16843052, 16843053, 16843054, 16843055, 16843056, 16843057, 2130969475, 2130969600};
+
+    /* renamed from: D */
+    public static final int[] f31495D = {16843126, 16843465, 2130969432};
+
+    /* renamed from: E */
+    public static final int[] f31496E = {2130969589};
+
+    /* renamed from: F */
+    public static final int[] f31497F = {2130969435, 2130969441};
+
+    /* renamed from: G */
+    public static final int[] f31498G = {16842970, 16843039, 16843296, 16843364, 2130968782, 2130968842, 2130968902, 2130969069, 2130969103, 2130969160, 2130969483, 2130969484, 2130969530, 2130969531, 2130969605, 2130969614, 2130969803};
+
+    /* renamed from: H */
+    public static final int[] f31499H = {16842930, 16843126, 16843131, 16843362, 2130969470};
+
+    /* renamed from: I */
+    public static final int[] f31500I = {16843036, 16843156, 16843157, 16843158, 16843532, 16843533};
+
+    /* renamed from: J */
+    public static final int[] f31501J = {16843161};
+
+    /* renamed from: K */
+    public static final int[] f31502K = {16843044, 16843045, 16843074, 2130969553, 2130969580, 2130969617, 2130969618, 2130969620, 2130969713, 2130969714, 2130969715, 2130969753, 2130969760, 2130969761};
+
+    /* renamed from: L */
+    public static final int[] f31503L = {16842901, 16842902, 16842903, 16842904, 16842906, 16842907, 16843105, 16843106, 16843107, 16843108, 16843692, 16844165, 2130969043, 2130969052, 2130969653, 2130969702};
+
+    /* renamed from: M */
+    public static final int[] f31504M = {16842927, 16843072, 2130968722, 2130968790, 2130968791, 2130968850, 2130968851, 2130968852, 2130968853, 2130968854, 2130968855, 2130969257, 2130969259, 2130969327, 2130969338, 2130969375, 2130969376, 2130969470, 2130969606, 2130969608, 2130969609, 2130969726, 2130969730, 2130969731, 2130969732, 2130969733, 2130969734, 2130969735, 2130969737, 2130969738};
+
+    /* renamed from: N */
+    public static final int[] f31505N = {16842752, 16842970, 2130969437, 2130969440, 2130969704};
+
+    /* renamed from: O */
+    public static final int[] f31506O = {16842964, 2130968670, 2130968671};
+
+    /* renamed from: P */
+    public static final int[] f31507P = {16842960, 16842994, 16842995};
+
+    /* renamed from: Q */
+    public static final int[] f31508Q = {C2820R.attr.ucrop_artv_ratio_title, C2820R.attr.ucrop_artv_ratio_x, C2820R.attr.ucrop_artv_ratio_y};
+
+    /* renamed from: U */
+    public static final int[] f31512U = {C2820R.attr.ucrop_aspect_ratio_x, C2820R.attr.ucrop_aspect_ratio_y, C2820R.attr.ucrop_circle_dimmed_layer, C2820R.attr.ucrop_dimmed_color, C2820R.attr.ucrop_frame_color, C2820R.attr.ucrop_frame_stroke_size, C2820R.attr.ucrop_grid_color, C2820R.attr.ucrop_grid_column_count, C2820R.attr.ucrop_grid_row_count, C2820R.attr.ucrop_grid_stroke_size, C2820R.attr.ucrop_show_frame, C2820R.attr.ucrop_show_grid, C2820R.attr.ucrop_show_oval_crop_frame};
+}

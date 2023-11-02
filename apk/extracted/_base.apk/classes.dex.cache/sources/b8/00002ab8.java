@@ -1,0 +1,15 @@
+package com.google.android.gms.internal.gtm;
+
+/* loaded from: /home/user/temp/discord/apk/extracted/_base.apk/classes3.dex */
+public final class zzcj implements zzcz {
+    final /* synthetic */ zzck zza;
+
+    public zzcj(zzck zzckVar) {
+        this.zza = zzckVar;
+    }
+
+    @Override // com.google.android.gms.internal.gtm.zzcz
+    public final void zza(Throwable th2) {
+        this.zza.zzae();
+    }
+}

@@ -1,0 +1,15 @@
+package com.google.android.gms.internal.gtm;
+
+/* loaded from: /home/user/temp/discord/apk/extracted/_base.apk/classes3.dex */
+public final class zzci implements Runnable {
+    final /* synthetic */ zzck zza;
+
+    public zzci(zzck zzckVar) {
+        this.zza = zzckVar;
+    }
+
+    @Override // java.lang.Runnable
+    public final void run() {
+        this.zza.zzab();
+    }
+}
