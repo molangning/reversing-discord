@@ -25,9 +25,10 @@ manifest.json was retrieved from discord with the version number of 201.13, if y
 
 ### Downloading OTA files
 
+From downloadOtaFiles in Android version, the uri for the files should https://discord.com/assets/OS_NAME/COMMIT/FILE
+
 #### Android
 
-From downloadOtaFiles, the uri for the files should https://discord.com/assets/android/COMMIT/file
 For this repository, it is https://discord.com/assets/android/24265e61aa4e5090b6b9f9689cb852aa7d744fa7/app/src/main/assets/index.android.bundle.patch
 This works too https://discord.com/assets/android/24265e61aa4e5090b6b9f9689cb852aa7d744fa7/app/src/main/res/raw/node_modules_discordapp_tokens_typography_generated_notosans_notosans700bold.ttf
 Url according to the generator in the class 
