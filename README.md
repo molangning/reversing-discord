@@ -15,6 +15,8 @@ private static final Uri BASE_OTA_URI = new Uri.Builder().scheme("https").author
 private final String getManifestURL() {
     String uri = BASE_OTA_URI.buildUpon().appendPath("android").appendPath(getVersion()).appendPath("manifest.json").build().toString();
     // Should return https://discord.com/android/VERSION/manifest.json
+    // Found https://discord.com/android/90.0/manifest.json through searching google
+    // https://discord.com/android/201.13/manifest.json works(current app version on google)
     C9612q.m13918g(uri, "BASE_OTA_URI\n           …)\n            .toString()");
     return uri;
 }
