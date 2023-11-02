@@ -32,6 +32,7 @@ referred as ANDROID_JS_BUNDLE in code
 ### Gets latest manifest.json file from discord
 
 ```java
+
 private static final Uri BASE_OTA_URI = new Uri.Builder().scheme("https").authority("discord.com").build();
 // Should return https://discord.com
 ......
