@@ -1,2 +1,3 @@
-# Ignore jadx cache
+# Ignore jadx files
 *.apk.cache
+*.apk.jadx

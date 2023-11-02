@@ -8,8 +8,109 @@
     "comments": [],
     "renames": []
   },
-  "openTabs": [],
-  "activeTab": -1,
+  "openTabs": [
+    {
+      "type": "resource",
+      "tabPath": "AndroidManifest.xml",
+      "subPath": "",
+      "caret": 6430,
+      "view": {
+        "x": 0,
+        "y": 4875
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.discord.bundle_updater.BundleUpdater",
+      "subPath": "java",
+      "caret": 39373,
+      "view": {
+        "x": 0,
+        "y": 11113
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "kotlin.text.o",
+      "subPath": "java",
+      "caret": 4151,
+      "view": {
+        "x": 0,
+        "y": 745
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.discord.bundle_updater.AppManifestMetadata",
+      "subPath": "java",
+      "caret": 7144,
+      "view": {
+        "x": 0,
+        "y": 1825
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "kotlin.jvm.internal.q",
+      "subPath": "java",
+      "caret": 1422,
+      "view": {
+        "x": 0,
+        "y": 565
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "kotlin.text.p",
+      "subPath": "java",
+      "caret": 29381,
+      "view": {
+        "x": 0,
+        "y": 10357
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.discord.bundle_updater.BundleUpdaterUtilsKt",
+      "subPath": "java",
+      "caret": 1021,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.discord.bundle_updater.BundleUpdaterUtils",
+      "subPath": "java",
+      "caret": 2908,
+      "view": {
+        "x": 0,
+        "y": 324
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.discord.bundle_updater.AppManifest",
+      "subPath": "java",
+      "caret": 10504,
+      "view": {
+        "x": 0,
+        "y": 3211
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "kotlin.collections.r",
+      "subPath": "java",
+      "caret": 15461,
+      "view": {
+        "x": 0,
+        "y": 2765
+      }
+    }
+  ],
+  "activeTab": 1,
   "cacheDir": "base.apk.cache",
   "enableLiveReload": false,
   "searchHistory": [
