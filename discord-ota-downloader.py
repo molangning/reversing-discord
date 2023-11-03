@@ -41,76 +41,85 @@ def get_manifest_file(os_type, version):
 
 def download_ota(base_path, manifest, ua, os_type):
     # Not stopping until we get all of 'em
+
+    manifest_keys = list(manifest.keys())
+
+    if "metadata" not in manifest_keys:
+        print("[!] Error, metadata field not in manifest")
+        clean_exit()
+    metadata = manifest["metadata"]
     
-    while True:
-        manifest_keys = list(manifest.keys())
+    if "commit" not in manifest["metadata"].keys():
+        print("[!] Error, commit not in metadata")
+        clean_exit()
+    commit = metadata["commit"]
+    
+    if "hashes" not in manifest_keys:
+        print("[!] Error, hashes field not in manifest")
+        clean_exit()
+    hashes = manifest["hashes"]
 
-        if "metadata" not in manifest_keys:
-            print("[!] Error, metadata field not in manifest")
-            clean_exit()
-        metadata = manifest["metadata"]
+    if "patches" not in manifest_keys:
+        print("[!] Warning, patches field not in manifest")
+        patches={}
+    else:
+        patches=manifest["patches"]
+
+    for i,v in hashes.items():
+        output_path = i
+        if output_path.endswith("/"):
+            output_path = output_path[:-1]
         
-        if "commit" not in manifest["metadata"].keys():
-            print("[!] Error, commit not in metadata")
-            clean_exit()
-        commit = metadata["commit"]
+        if not i.startswith("app/src/main/"):
+            print("[!] skipping %s as it does not start with app/src/main/"%(i))
+            continue
         
-        if "hashes" not in manifest_keys:
-            print("[!] Error, hashes field not in manifest")
-            clean_exit()
-        hashes = manifest["hashes"]
+        if "/.." in i:
+            print("[!] skipping %s as it may allow directory traversal attacks"%(i))
 
-        if "patches" not in manifest_keys:
-            print("[!] Warning, patches field not in manifest")
-            patches={}
-        else:
-            patches=manifest["patches"]
-
-        for i,v in hashes.items():
-            output_path = i
-            if output_path.endswith("/"):
-                output_path = output_path[:-1]
+        output_path = path.join(base_path, output_path[13:])
+        output_dir="/".join(output_path.split('/')[:-1])
+        if not output_dir:
+            output_dir="."
             
-            if not i.startswith("app/src/main/"):
-                print("[!] skipping %s as it does not start with app/src/main/"%(i))
+        if not path.isdir(output_dir):
+            print("[!] Creating directory %s"%(output_dir))
+            makedirs(output_dir)
+
+        if path.isfile(output_path):
+            if md5(open(output_path,"rb").read()).hexdigest() == v:
                 continue
-            
-            if "/.." in i:
-                print("[!] skipping %s as it may allow directory traversal attacks"%(i))
-
-            output_path = path.join(base_path, output_path[13:])
-            output_dir="/".join(output_path.split('/')[:-1])
-            if not output_dir:
-                output_dir="."
-                
-            if not path.isdir(output_dir):
-                print("[!] Creating directory %s"%(output_dir))
-                makedirs(output_dir)
-
-            if path.isfile(output_path):
-                if md5(open(output_path,"rb").read()).hexdigest() == v:
-                    continue
-                else:
-                    print("[!] Hash mismatch! file: %s"%(output_path))
             else:
-                print("[!] File does not exist! file: %s"%(output_path))
+                print("[!] Hash mismatch: %s"%(output_path))
+        else:
+            print("[!] Missing file: %s"%(output_path))
+    
+
+        headers = {
+            "User-Agent": ua
+            }
         
-            headers = {
-                "User-Agent": ua
-                }
-            
-            download_url = ASSET_URL%(os_type, commit, i)
+        download_url = ASSET_URL%(os_type, commit, i)
+        while True:
+            download_successful = True
             with requests.get(download_url, headers=headers, stream=True) as r:
+                # print("[+] Downloading %s"%(download_url))
                 if r.status_code != 200:
                     print("[!] Sleeping for a few seconds as we have hit a %s"%(r.status_code))
                     sleep(2.5)
+                    download_successful = False
+                    break
                 
                 with open(output_path,'wb') as f:
                     for chunk in r.iter_content(chunk_size=8192):
                         f.write(chunk)
 
-            # Sleep for a while to prevent rate limits
-            sleep(0.1)
+            if download_successful:
+                break
+
+        # Sleep for a while to prevent rate limits
+        sleep(0.05)
+
 
 
 print("[+] Getting most popular User Agents...")
