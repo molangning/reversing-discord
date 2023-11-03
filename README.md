@@ -46,9 +46,16 @@ From downloadOtaFiles in Android version, the uri for the files should https://d
 #### Android
 
 For this repository, it is https://discord.com/assets/android/24265e61aa4e5090b6b9f9689cb852aa7d744fa7/app/src/main/assets/index.android.bundle.patch
-This works too https://discord.com/assets/android/24265e61aa4e5090b6b9f9689cb852aa7d744fa7/app/src/main/res/raw/node_modules_discordapp_tokens_typography_generated_notosans_notosans700bold.ttf
+
+This works too 
+https://discord.com/assets/android/24265e61aa4e5090b6b9f9689cb852aa7d744fa7/app/src/main/res/raw/node_modules_discordapp_tokens_typography_generated_notosans_notosans700bold.ttf
+
 Url according to the generator in the class 
 https://discord.com/assets/android/24265e61aa4e5090b6b9f9689cb852aa7d74app%2Fsrc%2Fmain%2Fres%2Fraw%2Fnode_modules_discordapp_tokens_typography_generated_notosans_notosans700bold.ttfd.ttf
+
+#### iOS
+
+Coming soon™
 
 ## Interesting contents
 
