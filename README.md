@@ -60,11 +60,15 @@ Coming soon™
 ## Interesting contents
 
 Manifest.json contains a `patches` field that may sometimes be left blank
+
 For now the latest file can be found here
+
 `apk/extracted/_base.apk/assets/index.android.bundle`
+
 Targeted functionality should be found here, will write a script that gets latest patch
 
 type of file: `Hermes JavaScript bytecode, version 94`
+
 referred as ANDROID_JS_BUNDLE in code
 
 ## Interesting strings and functions
@@ -130,5 +134,6 @@ private final String getManifestURL() {
 ## Roadmap
 - [x] Decompile base app
 - [x] Get OTA updates to the app
+- [ ] Make some code that get's both ios and android files from manifest.json
 - [ ] Decompile OTA updates
 - [ ] Profit
