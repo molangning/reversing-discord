@@ -24,6 +24,7 @@ Output
 [Status: 404, Size: 0, Words: 1, Lines: 1, Duration: 57ms]
 | URL | https://discord.com/ios/1.0/manifest.json
 * FUZZ: ios
+
 [Status: 404, Size: 0, Words: 1, Lines: 1, Duration: 68ms]
 | URL | https://discord.com/android/1.0/manifest.json
 * FUZZ: android
