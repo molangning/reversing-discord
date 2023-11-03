@@ -15,15 +15,18 @@ manifest.json was retrieved from discord with the version number of 201.13, if y
 
 ### Fuzzing
 
+os-names.txt is from my SecList fork
+
 `ffuf -u https://discord.com/FUZZ/1.0/manifest.json -w os-names.txt -v -ml 1`
-os-names.txt is in my SecList fork
 
-output
+Output
 ```
-
-[Status: 404, Size: 0, Words: 1, Lines: 1, Duration: 57ms]                              | URL | https://discord.com/ios/1.0/manifest.json                                           * FUZZ: ios                                                                         [Status: 404, Size: 0, Words: 1, Lines: 1, Duration: 68ms]
-| URL | https://discord.com/android/1.0/manifest.json                                       * FUZZ: android
-
+[Status: 404, Size: 0, Words: 1, Lines: 1, Duration: 57ms]
+| URL | https://discord.com/ios/1.0/manifest.json
+* FUZZ: ios
+[Status: 404, Size: 0, Words: 1, Lines: 1, Duration: 68ms]
+| URL | https://discord.com/android/1.0/manifest.json
+* FUZZ: android
 ```
 
 ### Getting manifest.json
