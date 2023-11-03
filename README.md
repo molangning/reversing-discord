@@ -40,6 +40,11 @@ Output
 
 `https://discord.com/android/201.13/manifest.json`
 
+#### Electron based apps
+
+Not really supported(out of scope) but still good to know
+`https://discord.com/api/modules/stable/versions.json`
+
 ### Downloading OTA files
 
 From downloadOtaFiles in Android version, the uri for the files should https://discord.com/assets/OS_NAME/COMMIT/FILE
@@ -135,6 +140,7 @@ private final String getManifestURL() {
 ## Roadmap
 - [x] Decompile base app
 - [x] Get OTA updates to the app
-- [ ] Make some code that get's both ios and android files from manifest.json
+- [X] Make some code that get's both ios and android files from manifest.json
+- [ ] Now make it actually compatible with ios
 - [ ] Decompile OTA updates
 - [ ] Profit
