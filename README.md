@@ -139,6 +139,7 @@ private final String getManifestURL() {
 ## Unrelated stuff
 
 Profile decorations url from electron app: https://cdn.discordapp.com/avatar-decoration-presets/a_7d305bca6cf371df98c059f9d2ef05e4.png?size=96&passthrough=true
+file is APNG. Kudos to discord for using such a unknown file type
 
 ## Roadmap
 - [x] Decompile base app
