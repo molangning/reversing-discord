@@ -1,3 +1,5 @@
 # Ignore jadx files
 *.apk.cache
 apk/base.apk.jadx
+# Ignore work files
+work_files/
