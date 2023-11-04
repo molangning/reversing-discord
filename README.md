@@ -12,7 +12,8 @@ Discord's profile descoration
 
 The apk files(base.apk,config.XXXXX.apk) are downloaded from third party sources
 `extracted` directory contains source code decompiled with jadx-gui
-manifest.json was retrieved from discord with the version number of 201.13, if you want to access the files you should replace `app/src/main/...` with `apk/extracted/_base.apk/...`
+
+Manifest.json was retrieved from discord with the version number of 201.13, if you want to access the files you should replace `app/src/main/...` with `apk/extracted/_base.apk/...`
 
 ## Notes and details
 
