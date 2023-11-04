@@ -53,6 +53,8 @@ Not really supported(out of scope) but still good to know
 
 From downloadOtaFiles in Android version, the uri for the files should https://discord.com/assets/OS_NAME/COMMIT/FILE
 
+`discord-ota-downloader.py` Downloads OTA files found in manifeat.json
+
 #### Android
 
 For this repository, it is https://discord.com/assets/android/24265e61aa4e5090b6b9f9689cb852aa7d744fa7/app/src/main/assets/index.android.bundle.patch
