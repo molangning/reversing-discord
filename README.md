@@ -2,8 +2,11 @@
 This repository is dedicated to the reverse engineering of the discord mobile app for android. You are welcome to use my repository as reference and help. Pull requests regarding readability and documentation are always welcome!
 
 
-## Targeted APIs
+## Targeted functionalities
+
 APIs relating to find your friends, basically replicating https://osint.industries/ find discord user by phone number
+
+Discord's profile descoration
 
 ## Folder structure
 
@@ -61,7 +64,7 @@ https://discord.com/assets/android/24265e61aa4e5090b6b9f9689cb852aa7d74app%2Fsrc
 
 #### iOS
 
-Coming soon™
+Same as above
 
 ## Interesting contents
 
