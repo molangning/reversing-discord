@@ -136,6 +136,9 @@ private final String getManifestURL() {
     <data android:scheme="https" android:host="discord.com" android:pathPattern="/activate"/>
 </intent-filter>
 ```
+## Unrelated stuff
+
+Profile decorations url from electron app: https://cdn.discordapp.com/avatar-decoration-presets/a_7d305bca6cf371df98c059f9d2ef05e4.png?size=96&passthrough=true
 
 ## Roadmap
 - [x] Decompile base app
