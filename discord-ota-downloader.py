@@ -15,6 +15,7 @@ from time import sleep
 # Does it even matter if we use this ua string??
 DISCORD_UA = "Discord-Android/%s;RNA"
 GOOGLE_APP_STORE_URL = "https://play.google.com/store/apps/details?id=com.discord"
+APPLE_APP_STORE_URL = "https://apps.apple.com/app/discord-chat-talk-hangout/id985746746"
 MANIFEST_URL = "https://discord.com/%s/%s/manifest.json"
 ASSET_URL = "https://discord.com/assets/%s/%s/%s"
 
@@ -39,9 +40,29 @@ def requests_with_ua(url, ua=""):
 def get_manifest_file(os_type, version):
     return requests_with_ua(MANIFEST_URL%(os_type, version), DISCORD_UA%(version))
 
-def download_ota(base_path, manifest, ua, os_type):
+def download_file_stream(url,path,headers):
+    download_done = False
     # Not stopping until we get all of 'em
+    while not download_done:
+        
+        with requests.get(url, headers=headers, stream=True) as r:
+            # print("[+] Downloading %s"%(download_url))
+            if r.status_code != 200:
+                print("[!] Sleeping for a few seconds as we have hit a %s"%(r.status_code))
+                sleep(2.5)
+                break
+            
+            with open(path,'wb') as f:
+                for chunk in r.iter_content(chunk_size=8192):
+                    f.write(chunk)
+            download_done = True
 
+    # Sleep for a while to prevent rate limits
+    sleep(0.05)
+
+def download_ota(base_path, manifest, ua, os_type):
+    
+    print("[+] Checking regular files...")
     manifest_keys = list(manifest.keys())
 
     if "metadata" not in manifest_keys:
@@ -70,20 +91,24 @@ def download_ota(base_path, manifest, ua, os_type):
         if output_path.endswith("/"):
             output_path = output_path[:-1]
         
-        if not i.startswith("app/src/main/"):
-            print("[!] skipping %s as it does not start with app/src/main/"%(i))
-            continue
-        
-        if "/.." in i:
-            print("[!] skipping %s as it may allow directory traversal attacks"%(i))
+        if os_type == "android":
+            if not i.startswith("app/src/main/"):
+                print("[!] skipping %s as it does not start with app/src/main/"%(i))
+                continue
+            output_path = output_path[13:]
+        output_path = path.join(base_path,output_path)
 
-        output_path = path.join(base_path, output_path[13:])
+        if "/.." in v or "\.." in v:
+            print("[!] skipping %s as it may allow directory traversal attacks"%(i))
+            continue
+
+        
         output_dir="/".join(output_path.split('/')[:-1])
         if not output_dir:
             output_dir="."
             
         if not path.isdir(output_dir):
-            print("[!] Creating directory %s"%(output_dir))
+            print("[+] Creating directory %s"%(output_dir))
             makedirs(output_dir)
 
         if path.isfile(output_path):
@@ -93,33 +118,49 @@ def download_ota(base_path, manifest, ua, os_type):
                 print("[!] Hash mismatch: %s"%(output_path))
         else:
             print("[!] Missing file: %s"%(output_path))
-    
+
+        headers = {
+            "User-Agent": ua
+            }
+
+        download_url = ASSET_URL%(os_type, commit, i)
+        download_file_stream(download_url, output_path, headers)
+
+    print("[+] Regular files check done!")
+    print("[+] Checking patches...")
+
+    for i,v in patches.items():
+        output_path = v
+        if output_path.endswith("/"):
+            output_path = output_path[:-1]
+        
+        if os_type == "android":
+            if not v.startswith("app/src/main/"):
+                print("[!] skipping %s as it does not start with app/src/main/"%(v))
+                continue
+            output_path = output_path[13:]
+        output_path = path.join(base_path,output_path)
+        
+        if "/.." in v or "\.." in v:
+            print("[!] skipping %s as it may allow directory traversal attacks"%(v))
+            continue
+
+        
+        output_dir="/".join(output_path.split('/')[:-1])
+        if not output_dir:
+            output_dir="."
+            
+        if not path.isdir(output_dir):
+            print("[!] Creating directory %s"%(output_dir))
+            makedirs(output_dir)
 
         headers = {
             "User-Agent": ua
             }
         
-        download_url = ASSET_URL%(os_type, commit, i)
-        while True:
-            download_successful = True
-            with requests.get(download_url, headers=headers, stream=True) as r:
-                # print("[+] Downloading %s"%(download_url))
-                if r.status_code != 200:
-                    print("[!] Sleeping for a few seconds as we have hit a %s"%(r.status_code))
-                    sleep(2.5)
-                    download_successful = False
-                    break
-                
-                with open(output_path,'wb') as f:
-                    for chunk in r.iter_content(chunk_size=8192):
-                        f.write(chunk)
-
-            if download_successful:
-                break
-
-        # Sleep for a while to prevent rate limits
-        sleep(0.05)
-
+        print("[+] Downloading %s"%(v))
+        download_url = ASSET_URL%(os_type, commit, v)
+        download_file_stream(download_url, output_path, headers)
 
 
 print("[+] Getting most popular User Agents...")
@@ -144,7 +185,7 @@ best_user_agent = UA_dict["data"][0]['ua']
 # So this piece of code searches through the entire page
 
 print("[+] Getting discord's version on Google play store")
-status_code, req_content = requests_with_ua(GOOGLE_APP_STORE_URL ,best_user_agent)
+status_code, req_content = requests_with_ua(GOOGLE_APP_STORE_URL, best_user_agent)
 
 if status_code != 200:
     print("[!] Google play store returned a non 200 status code!")
@@ -189,6 +230,58 @@ except Exception as e:
     print("[!] Error decoding Android manifest.json!")
     clean_exit()
 
-print("[+] Starting android ota checks")
-download_ota("ota/android", android_manifest, LATEST_ANDROID_VERSION, "android")
-print("[+] Finished android ota checks!")
+# print("[+] Starting android ota checks")
+# download_ota("ota/android", android_manifest, LATEST_ANDROID_VERSION, "android")
+# print("[+] Finished android ota checks!")
+
+# if "202".isdigit()
+
+print("[+] Getting discord's version on Apple app store")
+status_code, req_content = requests_with_ua(APPLE_APP_STORE_URL, best_user_agent)
+
+if status_code != 200:
+    print("[!] Apple app store returned a non 200 status code!")
+    print("[!] Expected 200 status code, got %i instead"%(status_code))
+    clean_exit()
+
+soup = BeautifulSoup(req_content, "html.parser")
+version = soup.find("p",{"class":"whats-new__latest__version"}).string
+
+if len(version) == 0:
+    print("[!] Version string can't be found")
+    print("[!] Don't worry, this is normal. It means Apple changed their dom.")
+    print("[!] Submit a issue on github to let me know!")
+    clean_exit()
+
+if not version.startswith("Version "):
+    print("[!] Got a invalid version string from Apple app store")
+    print("[!] Got %s"%(version))
+    clean_exit()
+
+version = version[8:]
+
+if version.isdigit():
+    version+=".0"
+
+if not re.match("^[0-9]*\.[0-9]*$", version):
+    print("[!] Version number is not a decimal!")
+    print("[!] Got: %s"%(version))
+LATEST_IOS_VERSION = version
+
+print("[+] Got latest iOS release: %s"%(LATEST_IOS_VERSION))
+
+status_code, req_content = get_manifest_file("ios", LATEST_IOS_VERSION)
+
+if status_code != 200:
+    print("[!] Discord returned a non 200 status code for ios manifest.json")
+    clean_exit()
+
+try:
+    ios_manifest = json.loads(req_content)
+except Exception as e:
+    print("[!] Error decoding ios manifest.json!")
+    clean_exit()
+
+print("[+] Starting iOS ota checks")
+download_ota("ota/ios", ios_manifest, LATEST_IOS_VERSION, "ios")
+print("[+] Finished iOS ota checks!")
