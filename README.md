@@ -4,9 +4,8 @@ This repository is dedicated to the reverse engineering of the discord mobile ap
 
 ## Targeted functionalities
 
-APIs relating to find your friends, basically replicating https://osint.industries/ find discord user by phone number
-
-Discord's profile descoration
+- [ ] APIs relating to find your friends, basically replicating https://osint.industries/ find discord user by phone number
+- [ ] Discord's profile descoration
 
 ## Folder structure
 
