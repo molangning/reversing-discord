@@ -141,6 +141,6 @@ private final String getManifestURL() {
 - [x] Decompile base app
 - [x] Get OTA updates to the app
 - [X] Make some code that get's both ios and android files from manifest.json
-- [ ] Now make it actually compatible with ios
+- [x] Now make it actually compatible with ios
 - [ ] Decompile OTA updates
 - [ ] Profit
