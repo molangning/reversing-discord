@@ -85,7 +85,7 @@ def download_ota(base_path, manifest, ua, os_type):
     else:
         patches=manifest["patches"]
 
-    print("Got a list of %s regular files and %s patches"%(len(hashes), len(patches)))
+    print("[+] Got a list of %s regular files and %s patches"%(len(hashes), len(patches)))
 
     print("[+] Checking regular files...")
 
