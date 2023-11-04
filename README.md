@@ -1,4 +1,4 @@
-# decompiled-discord-apk
+# reversing-discord
 This repository is dedicated to the reverse engineering of the discord mobile app for android. You are welcome to use my repository as reference and help. Pull requests regarding readability and documentation are always welcome!
 
 
