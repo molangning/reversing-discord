@@ -230,9 +230,9 @@ except Exception as e:
     print("[!] Error decoding Android manifest.json!")
     clean_exit()
 
-# print("[+] Starting android ota checks")
-# download_ota("ota/android", android_manifest, LATEST_ANDROID_VERSION, "android")
-# print("[+] Finished android ota checks!")
+print("[+] Starting android ota checks")
+download_ota("ota/android", android_manifest, LATEST_ANDROID_VERSION, "android")
+print("[+] Finished android ota checks!")
 
 # if "202".isdigit()
 
