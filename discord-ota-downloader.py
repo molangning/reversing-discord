@@ -62,7 +62,6 @@ def download_file_stream(url,path,headers):
 
 def download_ota(base_path, manifest, ua, os_type):
     
-    print("[+] Checking regular files...")
     manifest_keys = list(manifest.keys())
 
     if "metadata" not in manifest_keys:
@@ -85,6 +84,10 @@ def download_ota(base_path, manifest, ua, os_type):
         patches={}
     else:
         patches=manifest["patches"]
+
+    print("Got a list of %s regular files and %s patches"%(len(hashes), len(patches)))
+
+    print("[+] Checking regular files...")
 
     for i,v in hashes.items():
         output_path = i
@@ -127,7 +130,7 @@ def download_ota(base_path, manifest, ua, os_type):
         download_file_stream(download_url, output_path, headers)
 
     print("[+] Regular files check done!")
-    print("[+] Checking patches...")
+    print("[+] Downloading patches...")
 
     for i,v in patches.items():
         output_path = v
