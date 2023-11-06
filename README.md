@@ -80,6 +80,15 @@ Targeted functionality should be found here, will write a script that gets lates
 
 type of file: `Hermes JavaScript bytecode, version 94`
 
+I am using https://github.com/P1sec/hermes-dec/ to decompile the bytecode
+
+```bash
+hbc-decompiler ../ota/ios/main.jsbundle ios.js
+hbc-decompiler ../ota/android/assets/index.android.bundle android.js
+hbc-disassembler ../ota/ios/main.jsbundle ios.hasm
+hbc-disassembler ../ota/android/assets/index.android.bundle android.hasm
+```
+
 referred as ANDROID_JS_BUNDLE in code
 
 ## Interesting strings and functions
