@@ -7,7 +7,7 @@ Join the discord here: https://discord.com/invite/QrVZCpsmZv
 ## Targeted functionalities
 
 - [ ] APIs relating to find your friends, basically replicating https://osint.industries/ find discord user by phone number
-- [ ] Discord's profile descoration
+- [ ] Discord's profile decoration
 
 ## Targeted apis
 
@@ -61,7 +61,7 @@ Not really supported(out of scope) but still good to know
 
 From downloadOtaFiles in Android version, the uri for the files should https://discord.com/assets/OS_NAME/COMMIT/FILE
 
-`discord-ota-downloader.py` Downloads OTA files found in manifeat.json
+`discord-ota-downloader.py` Downloads OTA files found in manifest.json
 
 #### Android
 
