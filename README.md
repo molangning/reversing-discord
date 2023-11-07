@@ -9,7 +9,10 @@ Join the discord here: https://discord.com/invite/QrVZCpsmZv
 - [ ] APIs relating to find your friends, basically replicating https://osint.industries/ find discord user by phone number
 - [ ] Discord's profile decoration
 
-## Targeted apis
+## Found apis
+
+### List of apis found by hackermondev
+https://gist.github.com/hackermondev/5c928ca12b4f4e6320100b11f798c23b
 
 ### Friend suggestions
     authenticated: yes
@@ -23,6 +26,9 @@ Join the discord here: https://discord.com/invite/QrVZCpsmZv
     https://discord.com/api/v9/friend-finder/find-friends
     maybe modules/friend_finder/native/FriendFinder.tsx?
     Bookmark: Bookmark-friend-finder
+    Bookmark for code: Bookmark_Very_Important_Code_For_Find_Friend
+
+    json fields: modified_contacts, phone_contact_methods_count
 
 ## Folder structure
 
@@ -30,8 +36,6 @@ The apk files(base.apk,config.XXXXX.apk) are downloaded from third party sources
 `extracted` directory contains source code decompiled with jadx-gui
 
 Manifest.json was retrieved from discord with the version number of 201.13, if you want to access the files you should replace `app/src/main/...` with `apk/extracted/_base.apk/...`
-
-decompiled_bundles.7z contains the decompiled source code. It is compressed as it exceeds github's file limit. I highly suggest redecompiling the files as the bundles may be outdated.
 
 ## Notes and details
 
