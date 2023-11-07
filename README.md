@@ -22,7 +22,7 @@ Join the discord here: https://discord.com/invite/QrVZCpsmZv
     type: POST
     https://discord.com/api/v9/friend-finder/find-friends
     maybe modules/friend_finder/native/FriendFinder.tsx?
-    line number: 2730429
+    Bookmark: Bookmark-friend-finder
 
 ## Folder structure
 
