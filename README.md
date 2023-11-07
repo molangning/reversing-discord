@@ -12,9 +12,17 @@ Join the discord here: https://discord.com/invite/QrVZCpsmZv
 ## Targeted apis
 
 ### Friend suggestions
-    type: authenticated
+    authenticated: yes
+    type: GET
     endpoint: `https://discord.com/api/v9/friend-suggestions`
-    description: Returns a json of friends found with phone number 
+    description: Returns a json of friends found with phone number
+
+### Friend finder 
+    authenticated: yes
+    type: POST
+    https://discord.com/api/v9/friend-finder/find-friends
+    maybe modules/friend_finder/native/FriendFinder.tsx?
+    line number: 2730429
 
 ## Folder structure
 
@@ -22,6 +30,8 @@ The apk files(base.apk,config.XXXXX.apk) are downloaded from third party sources
 `extracted` directory contains source code decompiled with jadx-gui
 
 Manifest.json was retrieved from discord with the version number of 201.13, if you want to access the files you should replace `app/src/main/...` with `apk/extracted/_base.apk/...`
+
+decompiled_bundles.7z contains the decompiled source code. It is compressed as it exceeds github's file limit. I highly suggest redecompiling the files as the bundles may be outdated.
 
 ## Notes and details
 
