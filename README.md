@@ -162,5 +162,5 @@ file is APNG. Kudos to discord for using such a unknown file type
 - [x] Get OTA updates to the app
 - [X] Make some code that get's both ios and android files from manifest.json
 - [x] Now make it actually compatible with ios
-- [ ] Decompile OTA updates
+- [x] Decompile OTA updates
 - [ ] Profit
