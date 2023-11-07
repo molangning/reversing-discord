@@ -9,6 +9,13 @@ Join the discord here: https://discord.com/invite/QrVZCpsmZv
 - [ ] APIs relating to find your friends, basically replicating https://osint.industries/ find discord user by phone number
 - [ ] Discord's profile descoration
 
+## Targeted apis
+
+### Friend suggestions
+    type: authenticated
+    endpoint: `https://discord.com/api/v9/friend-suggestions`
+    description: Returns a json of friends found with phone number 
+
 ## Folder structure
 
 The apk files(base.apk,config.XXXXX.apk) are downloaded from third party sources
