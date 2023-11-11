@@ -15,20 +15,30 @@ Join the discord here: https://discord.com/invite/QrVZCpsmZv
 https://gist.github.com/hackermondev/5c928ca12b4f4e6320100b11f798c23b
 
 ### Friend suggestions
-    authenticated: yes
-    type: GET
-    endpoint: `https://discord.com/api/v9/friend-suggestions`
-    description: Returns a json of friends found with phone number
+
+authenticated: yes
+type: GET
+endpoint: `https://discord.com/api/v9/friend-suggestions`
+description: Returns a json of friends found with phone number
 
 ### Friend finder 
-    authenticated: yes
-    type: POST
-    https://discord.com/api/v9/friend-finder/find-friends
-    maybe modules/friend_finder/native/FriendFinder.tsx?
-    Bookmark: Bookmark-friend-finder
-    Bookmark for code: Bookmark_Very_Important_Code_For_Find_Friend
 
-    json fields: modified_contacts, phone_contact_methods_count
+authenticated: yes
+type: POST
+https://discord.com/api/v9/friend-finder/find-friends
+file in split_js
+Bookmark: Bookmark-friend-finder
+Bookmark for code: Bookmark_Very_Important_Code_For_Find_Friend
+Bookmark for start of code: Bookmark-contact_sync-start
+json fields: modified_contacts, phone_contact_methods_count
+
+currently working json
+```json
+{
+    "modified_contacts":{},
+    "phone_contact_methods_count":"1"
+}
+```
 
 ## Folder structure
 
