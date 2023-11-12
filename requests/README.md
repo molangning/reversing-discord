@@ -1,0 +1,1 @@
+This directory is for making requests with burpsuite. You will need to substitute your own token in to use it properly
