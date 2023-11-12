@@ -1,9 +1,7 @@
-r6 = 5057;
-r5 = [5, 5058, 2201, 5364, 660, 688, 5251, 5243, 5365, 2];
-r5 = r8.bind(r2)(r7, r6, r5);
-r8 = r0.__d; // defines some constants, not important?
 // Lobotomy
+// Beware of thy dragons
 r7 = function(a0, a1, a2, a3, a4, a5, a6) { // Environment: r3
+    // some arguments are not used bruh
     r2 = a1;
     r4 = a5;
     r3 = a6;
@@ -363,8 +361,8 @@ r7 = function(a0, a1, a2, a3, a4, a5, a6) { // Environment: r3
                                 r1 = r2.substring;
                                 r1 = r1.bind(r2)(r4, r3); // limit 30 chars
                                 // familyName and givenName both get 30 chars
-                                r0[1] = r1; // [givenName, familyName]
-                                return r0; // returns an array of size two
+                                r0[1] = r1; 
+                                return r0; // r0 is [givenName, familyName]
                         }
                     };
                     r7 = r3.bind(r4)(r2);
@@ -609,12 +607,12 @@ r7 = function(a0, a1, a2, a3, a4, a5, a6) { // Environment: r3
                             r1 = r2.bind(r3)(r1);
                             return r0;
                         };
-                        r5 = r4.bind(r1)(r7); // r1 is undefinded, r7 is _closure1_slot21.fetchContacts.contactData
+                        r5 = r4.bind(r1)(r7); // r5 = r4(_closure1_slot21.fetchContacts.contactData)
                         // _closure1_slot21 is assigned at Bookmark-Assign-_closure1_slot21
                         // _closure1_slot21 is defined at Bookmark-Get-contactsData-functions
                         // Function for _closure1_slot32 is formatRequestModifiedContactsData
                         r4 = _closure1_slot32; // Bookmark_Very_Important_Code_For_Find_Friend
-                        r5 = r4.bind(r1)(r5); // modified_contacts, closure1_slot32(r1)(r5)
+                        r5 = r4.bind(r1)(r5); // modified_contacts, closure1_slot32(r5)
                         r4 = global;
                         r6 = r4.Object;
                         r4 = r6.keys;
@@ -622,7 +620,7 @@ r7 = function(a0, a1, a2, a3, a4, a5, a6) { // Environment: r3
                         r4 = r4.length; // Basically the length of modified contacts
                         r6 = {}; 
                         // This dictionary is the one that gets posted to https://discord.com/api/v9/friend-finder/find-friends
-                        r6['modified_contacts'] = r5;
+                        r6['modified_contacts'] = r5; // output of formatRequestModifiedContactsData
                         r6['phone_contact_methods_count'] = r4;
                         r5 = _closure1_slot0;
                         r7 = _closure1_slot1;
@@ -1568,5 +1566,5 @@ r7 = function(a0, a1, a2, a3, a4, a5, a6) { // Environment: r3
 // End of the contact sync circus
 r6 = 5058;
 r5 = [5, 10, 6, 13, 15, 17, 18, 31, 58, 22, 456, 494, 761, 5059, 5362, 1186, 3074, 1179, 756, 5251, 5062, 5243, 660, 5252, 2];
-r5 = r8.bind(r2)(r7, r6, r5); // HUH AGAIN
+r5 = r8.bind(r2)(r7, r6, r5); // Defines the function? This is an unknown part so beware of the dragons
 r8 = r0.__d; // global.__d
