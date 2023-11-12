@@ -19,7 +19,7 @@ https://gist.github.com/hackermondev/5c928ca12b4f4e6320100b11f798c23b
 authenticated: yes
 type: GET
 endpoint: `https://discord.com/api/v9/friend-suggestions`
-description: Returns a json of friends found with phone number
+description: Returns a json of friends found with phone number after registering phone number and enabling contact sync
 
 ### Friend finder 
 
