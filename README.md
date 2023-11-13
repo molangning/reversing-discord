@@ -27,18 +27,7 @@ authenticated: yes
 type: POST
 https://discord.com/api/v9/friend-finder/find-friends
 file in split_js
-Bookmark: Bookmark-friend-finder
-Bookmark for code: Bookmark_Very_Important_Code_For_Find_Friend
-Bookmark for start of code: Bookmark-contact_sync-start
 json fields: modified_contacts, phone_contact_methods_count
-
-currently working json
-```json
-{
-    "modified_contacts":{},
-    "phone_contact_methods_count":"1"
-}
-```
 
 ## Folder structure
 
@@ -183,6 +172,15 @@ private final String getManifestURL() {
     <data android:scheme="https" android:host="discord.com" android:pathPattern="/activate"/>
 </intent-filter>
 ```
+
+### Bad domains
+```js
+r5 = 'https://cdn.discordapp.com/bad-domains/updated_hashes.json';
+var _closure1_slot3 = r5;
+r5 = 'https://cdn.discordapp.com/bad-domains/current_revision.txt';
+```
+list of bad domain hashes
+
 ## Unrelated stuff
 
 Profile decorations url from electron app: https://cdn.discordapp.com/avatar-decoration-presets/a_7d305bca6cf371df98c059f9d2ef05e4.png?size=96&passthrough=true
