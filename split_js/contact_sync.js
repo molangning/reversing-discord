@@ -619,8 +619,8 @@ r7 = function(a0, a1, a2, a3, a4, a5, a6) { // Environment: r3
                         r4 = global;
                         r6 = r4.Object;
                         r4 = r6.keys;
-                        r4 = r4.bind(r6)(r7);
-                        r4 = r4.length; // Basically the length of modified contacts
+                        r4 = r4.bind(r6)(r7); // global.Object.keys(r7)
+                        r4 = r4.length; // Length of _closure1_slot21.fetchContacts.contactData
                         r6 = {}; 
                         // This dictionary is the one that gets posted to https://discord.com/api/v9/friend-finder/find-friends
                         r6['modified_contacts'] = r5; // output of formatRequestModifiedContactsData

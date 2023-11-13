@@ -336,21 +336,21 @@ r7 = function(a0, a1, a2, a3, a4, a5, a6) { // Environment: r3
                     r1 = r2.forEach;
                     r0 = function(a0) { // Environment: r0
                         _fun53510: for(var _fun53510_ip = 0; ; ) switch(_fun53510_ip) {
-                case 0:
-                            r2 = a0;
-                            r1 = _closure2_slot2;
-                            r0 = r1[r2];
-                            r4 = null;
-                            r3 = 0;
-                            if(!(r4 != r0)) { _fun53510_ip = 25; continue _fun53510 }
-                case 22:
-                            r3 = r0;
-                case 25:
-                            r0 = 1;
-                            r0 = r3 + r0;
-                            r1[r2] = r0;
-                            r0 = undefined;
-                            return r0;
+                            case 0:
+                                r2 = a0;
+                                r1 = _closure2_slot2;
+                                r0 = r1[r2];
+                                r4 = null;
+                                r3 = 0;
+                                if(!(r4 != r0)) { _fun53510_ip = 25; continue _fun53510 }
+                            case 22:
+                                r3 = r0;
+                            case 25:
+                                r0 = 1;
+                                r0 = r3 + r0;
+                                r1[r2] = r0;
+                                r0 = undefined;
+                                return r0;
                         }
                     };
                     r0 = r1.bind(r2)(r0);
