@@ -10,7 +10,7 @@ Join the discord here: https://discord.com/invite/QrVZCpsmZv
 ## Targeted functionalities
 
 - [ ] APIs relating to find your friends, basically replicating https://osint.industries/ find discord user by phone number
-- [ ] Discord's profile decoration
+- [x] Discord's profile decoration
 
 ## Found apis
 
@@ -18,19 +18,21 @@ Join the discord here: https://discord.com/invite/QrVZCpsmZv
 https://gist.github.com/hackermondev/5c928ca12b4f4e6320100b11f798c23b
 
 ### Friend suggestions
-
+```
 authenticated: yes
 type: GET
 endpoint: `https://discord.com/api/v9/friend-suggestions`
-description: Returns a json of friends found with phone number after registering phone number and enabling contact sync
+Description: Returns a json of friends found with phone number after registering phone number and enabling contact sync
+```
 
 ### Friend finder 
-
-authenticated: yes
-type: POST
-https://discord.com/api/v9/friend-finder/find-friends
-file in split_js
-json fields: modified_contacts, phone_contact_methods_count
+```
+Authenticated: yes
+Type: POST
+Endpoint: https://discord.com/api/v9/friend-finder/find-friends
+Description: file in split_js
+Json fields: modified_contacts, phone_contact_methods_count
+```
 
 ## Folder structure
 
@@ -187,7 +189,7 @@ list of bad domain hashes
 ## Unrelated stuff
 
 Profile decorations url from electron app: https://cdn.discordapp.com/avatar-decoration-presets/a_7d305bca6cf371df98c059f9d2ef05e4.png?size=96&passthrough=true
-file is APNG. Kudos to discord for using such a unknown file type
+file is APNG. That's how they are able to make the image animated.
 
 ## Roadmap
 - [x] Decompile base app
