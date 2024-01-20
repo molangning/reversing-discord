@@ -2,7 +2,7 @@
 This repository is dedicated to the reverse engineering of the discord mobile app for android. You are welcome to use my repository as reference and help. Pull requests regarding readability and documentation are always welcome!
 
 ## Status
-Semi-deprecated, but contributions are welcome
+Technically alive
 
 ## Data mining discord
 Join the discord here: https://discord.com/invite/QrVZCpsmZv
