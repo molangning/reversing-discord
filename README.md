@@ -1,6 +1,10 @@
 # reversing-discord
 This repository is dedicated to the reverse engineering of the discord mobile app for android. You are welcome to use my repository as reference and help. Pull requests regarding readability and documentation are always welcome!
 
+## Discord mobile tracker
+That repository checks for changes every 8 hours. Use this if you want to find some vulnerabilities and past versions.
+[molangning/discord-mobile-tracker](https://github.com/molangning/discord-mobile-tracker)
+
 ## Status
 Technically alive
 
@@ -9,7 +13,7 @@ Join the discord here: https://discord.com/invite/QrVZCpsmZv
 
 ## Targeted functionalities
 
-- [ ] APIs relating to find your friends, basically replicating https://osint.industries/ find discord user by phone number
+- [x] APIs relating to find your friends, basically replicating https://osint.industries/ find discord user by phone number
 - [x] Discord's profile decoration
 
 ## Found apis
